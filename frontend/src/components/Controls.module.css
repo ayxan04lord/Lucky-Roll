@@ -1,0 +1,108 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--chip-bg);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.chip:hover {
+  border-color: #e94560;
+  color: #e94560;
+}
+
+.chip.active {
+  background: #e94560;
+  border-color: #e94560;
+  color: white;
+}
+
+.input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--chip-bg);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: 180px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: #e94560;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 11px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 0.3px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.primary {
+  background: linear-gradient(135deg, #e94560, #c0392b);
+  color: white;
+  box-shadow: 0 4px 14px rgba(233,69,96,0.35);
+}
+
+.secondary {
+  background: var(--chip-bg);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}

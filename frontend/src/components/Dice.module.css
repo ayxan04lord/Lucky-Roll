@@ -1,0 +1,105 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.dice {
+  width: 110px;
+  height: 110px;
+  background: var(--dice-bg);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s;
+  position: relative;
+  user-select: none;
+  outline: none;
+}
+
+.dice svg {
+  width: 72%;
+  height: 72%;
+}
+
+.dot {
+  fill: var(--dot-color);
+}
+
+.number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--dot-color);
+  line-height: 1;
+}
+
+.sideLabel {
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--dot-color);
+  opacity: 0.35;
+  letter-spacing: 0.5px;
+}
+
+.dice:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.dice:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.lockedDice {
+  opacity: 0.55;
+  cursor: not-allowed;
+  border: 2px solid #e94560;
+}
+
+.lockedDice:hover {
+  transform: none;
+}
+
+/* Roll animation */
+@keyframes shake {
+  0%   { transform: rotate(0deg) scale(1); }
+  15%  { transform: rotate(-14deg) scale(1.12); }
+  30%  { transform: rotate(14deg) scale(1.12); }
+  45%  { transform: rotate(-8deg) scale(1.06); }
+  60%  { transform: rotate(8deg) scale(1.06); }
+  75%  { transform: rotate(-4deg) scale(1.02); }
+  90%  { transform: rotate(4deg) scale(1.02); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.rolling {
+  animation: shake 0.5s ease;
+  pointer-events: none;
+}
+
+.lockBtn {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.15s;
+  padding: 2px;
+}
+
+.lockBtn:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.locked {
+  opacity: 1;
+}

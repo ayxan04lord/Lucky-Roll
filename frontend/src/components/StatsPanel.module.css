@@ -1,0 +1,102 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 12px;
+}
+
+.card {
+  flex: 1;
+  background: var(--chip-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e94560;
+}
+
+.cardLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.chart {
+  width: 100%;
+}
+
+.chartTitle {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 80px;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  gap: 3px;
+}
+
+.barTrack {
+  flex: 1;
+  width: 100%;
+  background: var(--border);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.bar {
+  width: 100%;
+  background: linear-gradient(180deg, #e94560, #c0392b);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.4s ease;
+  min-height: 4px;
+}
+
+.barLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.barCount {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.empty {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px 0;
+}

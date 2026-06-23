@@ -1,0 +1,48 @@
+:root[data-theme="dark"] {
+  --bg: #0d0d1a;
+  --bg2: #13132a;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.08);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255,255,255,0.75);
+  --text-muted: rgba(255,255,255,0.4);
+  --border: rgba(255,255,255,0.1);
+  --chip-bg: rgba(255,255,255,0.06);
+  --dice-bg: #ffffff;
+  --dot-color: #0d0d1a;
+  --accent: #e94560;
+  --accent2: #f5a623;
+  --gold: #f5c518;
+  --nav-bg: rgba(13,13,26,0.95);
+}
+
+:root[data-theme="light"] {
+  --bg: #f0f2ff;
+  --bg2: #e8ebff;
+  --card-bg: rgba(255,255,255,0.9);
+  --card-border: rgba(0,0,0,0.08);
+  --text-primary: #0d0d1a;
+  --text-secondary: #2a2a4a;
+  --text-muted: #7777aa;
+  --border: rgba(0,0,0,0.1);
+  --chip-bg: rgba(0,0,0,0.04);
+  --dice-bg: #ffffff;
+  --dot-color: #0d0d1a;
+  --accent: #e94560;
+  --accent2: #f5a623;
+  --gold: #d4a000;
+  --nav-bg: rgba(240,242,255,0.97);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }

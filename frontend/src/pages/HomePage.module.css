@@ -1,0 +1,209 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-bottom: 80px;
+}
+
+/* ── Hero ── */
+.hero {
+  min-height: 520px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(233,69,96,0.2) 0%, transparent 60%),
+              linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px 40px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slideWrap {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-height: 280px;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.emoji { font-size: 4.5rem; line-height: 1; }
+
+.slide h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+.slide p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+.ctaBtn {
+  padding: 14px 36px;
+  background: linear-gradient(135deg, var(--accent), #c0392b);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 6px 20px rgba(233,69,96,0.4);
+}
+
+.ctaBtn:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(233,69,96,0.5); }
+
+.dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 200px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.activeDot {
+  background: var(--accent);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ── Sections ── */
+.features, .games {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Feature cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+
+.icon { font-size: 2.4rem; }
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 12px 0 8px;
+  color: var(--text-primary);
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Game cards */
+.gameCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.gameCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.gameIcon { font-size: 3rem; }
+
+.gameCard h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.gameCard p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.playBtn {
+  margin-top: 8px;
+  padding: 9px 24px;
+  background: linear-gradient(135deg, var(--accent), #c0392b);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.playBtn:hover { transform: scale(1.05); }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .dots { margin-top: 220px; }
+}
